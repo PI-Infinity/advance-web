@@ -24,17 +24,26 @@ export default function Home() {
           width: "1920px",
           height: "1920px",
           position: "fixed",
-          top: "-600px",
+          top: "-500px",
           left: 0,
           zIndex: -1,
           transform: "rotate(90deg)",
         }}
       />
-
-      <Header />
-      <Hero />
-      <Features />
-      <Footer />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "8px",
+          width: "100%",
+          alignItems: "center",
+        }}
+      >
+        <Header />
+        <Hero />
+        <Features />
+        <Footer />
+      </div>
     </AppContextWrapper>
   );
 }
