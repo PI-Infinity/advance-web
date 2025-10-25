@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative overflow-hidden pt-48 pb-48 text-center px-6"
+      className="relative overflow-hidden py-36 sm:py-48 text-center px-6"
     >
       {/* Background Glow */}
       <div className="absolute inset-0 to-white pointer-events-none" />
@@ -31,17 +31,17 @@ export default function Hero() {
         </p>
 
         {/* Download Buttons */}
-        <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10 w-full px-8 sm:px-24">
+        <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10 w-full px-0 sm:px-24">
           <a
             href="https://apps.apple.com/ge/app/advnc/id6752962049"
             style={{
               width: "100%",
-              height: "72px",
+              height: isMobile ? "64px" : "72px",
               alignItems: "center",
               justifyContent: "center",
               display: "flex",
             }}
-            className="flex items-center gap-3 bg-black text-white  rounded-xl text-lg font-semibold shadow-lg hover:scale-105 transition-transform"
+            className="flex items-center gap-3 bg-black text-white  rounded-2xl text-lg font-semibold shadow-lg hover:scale-105 transition-transform"
           >
             <Apple size={26} />
             Apple Store (iOS)
@@ -54,12 +54,12 @@ export default function Hero() {
             }
             style={{
               width: "100%",
-              height: "72px",
+              height: isMobile ? "64px" : "72px",
               alignItems: "center",
               justifyContent: "center",
               display: "flex",
             }}
-            className="flex items-center gap-3 bg-[#38BDF8] text-white rounded-xl text-lg font-semibold shadow-lg hover:scale-105 transition-transform"
+            className="flex items-center gap-3 bg-[#38BDF8] text-white rounded-2xl text-lg font-semibold shadow-lg hover:scale-105 transition-transform"
           >
             <Play size={26} /> Google Playe (Android)
           </a>

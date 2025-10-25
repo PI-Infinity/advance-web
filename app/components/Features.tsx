@@ -4,7 +4,7 @@ import { CheckCircle2 } from "lucide-react";
 
 export default function Features() {
   return (
-    <section id="features" className="relative max-w-6xl mx-auto px-6">
+    <section id="features" className="relative max-w-6xl mx-auto px-4 sm:px-6">
       {/* Section Header */}
       <div className="text-center mb-16">
         <h3 className="text-3xl md:text-4xl font-extrabold tracking-tight text-[#38BDF8]">
@@ -20,9 +20,9 @@ export default function Features() {
         {aboutGameContentKa.map((item, index) => (
           <div
             key={index}
-            className="p-8 rounded-3xl bg-white/5 shadow-xl hover:shadow-2xl transition duration-300"
+            className="p-6 sm:p-8 rounded-3xl bg-white/5 shadow-xl hover:shadow-2xl transition duration-300"
           >
-            <h4 className="text-2xl font-bold mb-4 flex items-center gap-2">
+            <h4 className="text-xl sm:text-2xl font-bold mb-4 flex items-center gap-2">
               <CheckCircle2 className="text-[#38BDF8]" /> {item.title}
             </h4>
 
@@ -33,7 +33,7 @@ export default function Features() {
             {item.subsections && (
               <ul className="space-y-4 mt-6">
                 {item.subsections.map((sub: any, i: any) => (
-                  <li key={i} className="border-l-4 border-indigo-500 pl-4">
+                  <li key={i} className="border-l-4 border-[#38BDF8] pl-4">
                     <p className="font-semibold text-[#94A3B8] text-lg">
                       {sub.subtitle}
                     </p>

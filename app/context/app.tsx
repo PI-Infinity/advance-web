@@ -41,7 +41,7 @@ export const AppContextWrapper: React.FC<contextProps> = ({ children }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const [activeSection, setActiveSection] = useState("home");
+  const [activeSection, setActiveSection] = useState("hero");
 
   const scrollToSection = (id: any) => {
     const element = document.getElementById(id);

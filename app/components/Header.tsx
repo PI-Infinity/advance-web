@@ -13,7 +13,7 @@ export default function Header() {
     <>
       {/* HEADER */}
       <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-sm bg-white/2 border-b border-white/5 transition-all">
-        <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+        <div className="max-w-7xl mx-auto flex items-center justify-between pb-2 pt-0 sm:py-4 px-2 pr-6 sm:px-6">
           {/* LOGO */}
           <div className="flex flex-row items-center">
             <Img
