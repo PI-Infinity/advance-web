@@ -67,10 +67,7 @@ export default function Hero() {
 
           {/* Google Play */}
           <a
-            href="#download"
-            onClick={() =>
-              alert("ჯერჯერობით მიუწვდომელია, ვმუშაობთ ანდროიდის დამატებაზე!")
-            }
+            href="https://play.google.com/store/apps/details?id=com.advance.ena.app"
             className="flex items-center justify-center rounded-2xl shadow-lg hover:scale-105 transition-transform  p-3"
           >
             <img

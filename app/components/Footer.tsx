@@ -30,10 +30,7 @@ export default function Footer() {
 
           {/* Google Play */}
           <a
-            href="#download"
-            onClick={() =>
-              alert("ჯერჯერობით მიუწვდომელია, ვმუშაობთ ანდროიდის დამატებაზე!")
-            }
+            href="https://play.google.com/store/apps/details?id=com.advance.ena.app"
             className="flex items-center justify-center rounded-2xl hover:scale-105 transition-transform  p-3"
           >
             <img
@@ -46,19 +43,19 @@ export default function Footer() {
         {/* Socials (placeholder links) */}
         <div className="flex gap-6">
           <a
-            href="#"
+            href="https://www.facebook.com/share/17qbM7NYqH/?mibextid=wwXIfr"
             className="text-[#94A3B8] hover:text-indigo-600 transition transform hover:scale-110"
           >
             Facebook
           </a>
           <a
-            href="#"
+            href="https://www.instagram.com/advnc.app?igsh=MTJqaTJmOWNuMHJubQ%3D%3D&utm_source=qr"
             className="text-[#94A3B8] hover:text-indigo-600 transition transform hover:scale-110"
           >
             Instagram
           </a>
           <a
-            href="#"
+            href="https://www.tiktok.com/@advance2202?_r=1&_t=ZS-91ItW3h4vMg"
             className="text-[#94A3B8] hover:text-indigo-600 transition transform hover:scale-110"
           >
             Tiktok
