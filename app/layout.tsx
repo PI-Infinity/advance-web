@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata = {
-  title: "Advance – ინგლისური ენის სასწავლო უნივერსალური პლატფორმა",
+  title: "Advance – ინგლისური ენის სასწავლო უნივერსალური აპლიკაცია",
   description: "მეტი ცოდნა ყოველდღიურად!",
   keywords: [
     "Advance",
@@ -12,9 +12,9 @@ export const metadata = {
     "inglisuris swavla",
   ],
 
-  // ✅ Social preview settings
+  // ✅ Social preview settings /
   openGraph: {
-    title: "Advance – ინგლისური ენის სასწავლო უნივერსალური პლატფორმა",
+    title: "Advance – ინგლისური ენის სასწავლო უნივერსალური აპლიკაცია",
     description: "მეტი ცოდნა ყოველდღიურად! 🌟",
     url: "https://advnc.pro",
     siteName: "Advance",
@@ -33,7 +33,7 @@ export const metadata = {
   // ✅ Twitter cards
   twitter: {
     card: "summary_large_image",
-    title: "Advance – ინგლისური ენის სასწავლო უნივერსალური პლატფორმა",
+    title: "Advance – ინგლისური ენის სასწავლო უნივერსალური აპლიკაცია",
     description: "მეტი ცოდნა ყოველდღიურად!",
     images: ["https://advnc.pro/og-image.png"],
   },

@@ -24,7 +24,7 @@ export default function Hero() {
         >
           ინგლისური ენის სასწავლო
           <br />
-          <span className="text-white">უნივერსალური პლატფორმა</span>
+          <span className="text-white">უნივერსალური აპლიკაცია</span>
         </h2>
 
         <p className="mt-4 text-base md:text-lg max-w-3xl leading-relaxed text-slate-300">
