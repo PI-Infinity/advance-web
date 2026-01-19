@@ -11,26 +11,46 @@ export default function Features() {
           Advance?
         </h3>
         <p className="text-lg max-w-2xl mx-auto mt-4 text-[#94A3B8]">
-          ეფექტური სწავლების სისტემა, რომელიც მორგებულია შენზე 🔥
+          ეფექტური სწავლების სისტემა, რომელიც მორგებულია შენზე
         </p>
       </div>
 
       {/* Feature Cards */}
       <div className="grid gap-8 md:gap-10">
-        {aboutGameContentKa.map((item, index) => (
-          <div
-            key={index}
-            className="p-6 sm:p-8 rounded-3xl bg-[rgba(255,255,255,0.05)] shadow-xl hover:shadow-2xl transition duration-300 flex flex-col items-center"
-          >
-            <h4 className="text-xl sm:text-2xl font-bold mb-4 flex items-center gap-2 text-center">
-              {item.title}
-            </h4>
+        {aboutGameContentKa.map((item, index) => {
+          const Icon: any = item.icon;
 
-            <p className="opacity-80 text-center whitespace-pre-line leading-relaxed mb-4 text-[#94A3B8]">
-              {item.content}
-            </p>
-          </div>
-        ))}
+          return (
+            <div
+              key={index}
+              className="p-6 sm:p-8 rounded-3xl bg-[rgba(255,255,255,0.05)] shadow-xl hover:shadow-2xl transition duration-300 flex flex-col items-center"
+            >
+              {Icon && (
+                <div
+                  style={{
+                    width: "56px",
+                    aspectRatio: 1,
+                    borderRadius: 12,
+                    background: "rgba(255,255,255,0.05)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    marginBottom: "16px",
+                  }}
+                >
+                  <Icon className="text-3xl" style={{ color: item.color }} />
+                </div>
+              )}
+              <h4 className="text-xl sm:text-2xl font-bold mb-4 flex items-center gap-2 text-center">
+                {item.title}
+              </h4>
+
+              <p className="opacity-80 text-center whitespace-pre-line leading-relaxed mb-4 text-[#94A3B8]">
+                {item.content}
+              </p>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

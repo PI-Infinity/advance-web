@@ -1,83 +1,147 @@
-import { Apple, Play } from "lucide-react";
-import { useAppContext } from "../context/app";
-import LottiePlayer from "./lottie-player";
+import React, { useState } from "react";
 import Img from "./image";
+import { useAppContext } from "../context/app";
 
 export default function Hero() {
   const { isMobile } = useAppContext();
+  const [open, setOpen] = useState(false);
+
+  const iosUrl = "https://apps.apple.com/ge/app/advnc/id6752962049";
+  const androidUrl =
+    "https://play.google.com/store/apps/details?id=com.advance.ena.app";
+
   return (
     <section
       id="hero"
       className="relative overflow-hidden py-32 pb-28 sm:py-48 text-center px-6 flex flex-col items-center"
     >
-      {/* Background Glow */}
-      {/* {isMobile && (
-        <LottiePlayer
-          src="/animations/cover.json"
-          background="transparent"
-          speed="1"
-          autoplay
-          loop
-          style={{
-            width: "360px",
-            height: "400px",
-          }}
-        />
-      )} */}
-
       <div className="relative max-w-5xl mx-auto flex flex-col items-center gap-6">
-        {/* Title */}
         <h2
-          style={{ lineHeight: isMobile ? "48px" : "72px" }}
-          className="py-4 text-4xl md:text-6xl font-extrabold leading-tight tracking-tight text-[#38BDF8]"
+          className="
+            py-4 text-4xl md:text-6xl font-extrabold leading-tight tracking-tight
+            text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-300
+          "
         >
-          ინგლისური ენის
+          ინგლისური ენის სასწავლო
           <br />
-          სასწავლო აპლიკაცია
+          <span className="text-white">უნივერსალური პლატფორმა</span>
         </h2>
 
-        {/* Description */}
-        <p className="text-lg md:text-xl max-w-3xl text-[#94A3B8]">
-          მეტი ნასწავლი სიტყვა ყოველდღე!
-          <br />
-          გაიუმჯობესე ცოდნა!
+        <p className="mt-4 text-base md:text-lg max-w-3xl leading-relaxed text-slate-300">
+          ლექსიკა, გრამატიკა, კითხვა და სასაუბრო პრაქტიკა
+          <br className="hidden sm:block" /> ერთ სივრცეში — ისწავლე ეფექტურად და
+          პრაქტიკულად.
         </p>
-        <Img
-          alt="logo"
-          style={{
-            width: "100%",
-            height: "100%",
-          }}
-          src={require("../../public/apple-button.png")}
-        />
 
-        {/* Download Buttons */}
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-0 mt-10 px-0 sm:px-24">
-          {/* App Store */}
+        {/* (optional) logo/image */}
+        {/* <Img alt="logo" style={{ width: "100%", height: "100%" }} src={require("../../public/apple-button.png")} /> */}
+
+        {/* Desktop: 2 store buttons */}
+        <div className="hidden sm:flex flex-row justify-center items-center gap-0 mt-8 px-0 sm:px-24">
           <a
-            href="https://apps.apple.com/ge/app/advnc/id6752962049"
+            href={iosUrl}
             className="flex items-center justify-center rounded-2xl shadow-lg hover:scale-105 transition-transform p-3"
           >
             <img
               src="/apple-button.png"
               alt="Download on App Store"
-              className="w-[240px] h-auto object-contain"
+              className="w-[280px] h-auto object-contain"
             />
           </a>
 
-          {/* Google Play */}
           <a
-            href="https://play.google.com/store/apps/details?id=com.advance.ena.app"
-            className="flex items-center justify-center rounded-2xl shadow-lg hover:scale-105 transition-transform  p-3"
+            href={androidUrl}
+            className="flex items-center justify-center rounded-2xl shadow-lg hover:scale-105 transition-transform p-3"
           >
             <img
               src="/google-button.png"
               alt="Get it on Google Play"
-              className="w-[240px] h-auto object-contain"
+              className="w-[280px] h-auto object-contain"
             />
           </a>
         </div>
+
+        {/* Mobile: single Download button */}
+        <div className="sm:hidden w-full mt-8 px-2">
+          <button
+            onClick={() => setOpen(true)}
+            className="
+              w-full max-w-sm mx-auto
+              rounded-2xl px-5 py-4
+              font-bold text-base
+              bg-sky-500 text-white
+              shadow-lg shadow-sky-500/20
+              active:scale-[0.99] transition
+            "
+          >
+            გადმოწერა
+          </button>
+          <p className="mt-3 text-xs text-slate-400">
+            აირჩიე შენი პლატფორმა — iOS ან Android
+          </p>
+        </div>
       </div>
+
+      {/* Mobile modal / bottom sheet */}
+      {open && (
+        <div
+          className="fixed inset-0 z-50 flex items-end sm:hidden"
+          role="dialog"
+          aria-modal="true"
+        >
+          {/* backdrop */}
+          <button
+            className="absolute inset-0 bg-black/60"
+            onClick={() => setOpen(false)}
+            aria-label="Close"
+          />
+
+          {/* sheet */}
+          <div className="relative w-full rounded-t-3xl bg-slate-900 border border-slate-800 p-5">
+            <div className="mx-auto mb-4 h-1.5 w-12 rounded-full bg-slate-700" />
+
+            <h3 className="text-white text-lg font-extrabold">
+              აირჩიე პლატფორმა
+            </h3>
+            <p className="text-slate-300 text-sm mt-1">
+              რომელზე გინდა გადმოწერა?
+            </p>
+
+            <div className="mt-5 grid gap-3">
+              <a
+                href={iosUrl}
+                className="
+                  w-full rounded-2xl p-4
+                  bg-white/5 border border-white/10
+                  text-white font-semibold
+                  active:scale-[0.99] transition
+                "
+              >
+                🍎 App Store (iOS)
+              </a>
+
+              <a
+                href={androidUrl}
+                className="
+                  w-full rounded-2xl p-4
+                  bg-white/5 border border-white/10
+                  text-white font-semibold
+                  active:scale-[0.99] transition
+                "
+              >
+                🤖 Google Play (Android)
+              </a>
+
+              <button
+                onClick={() => setOpen(false)}
+                className="w-full rounded-2xl p-4 text-slate-300 font-semibold bg-white/0 border border-slate-700"
+              >
+                გაუქმება
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
