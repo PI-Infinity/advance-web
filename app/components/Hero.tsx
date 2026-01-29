@@ -1,6 +1,7 @@
+// app/components/Hero.tsx
 import React, { useState } from "react";
-import Img from "./image";
 import { useAppContext } from "../context/app";
+import { trackDownload } from "../lib/analytics";
 
 export default function Hero() {
   const { isMobile } = useAppContext();
@@ -16,16 +17,22 @@ export default function Hero() {
       className="relative overflow-hidden py-32 pb-28 sm:py-48 text-center px-6 flex flex-col items-center"
     >
       <div className="relative max-w-5xl mx-auto flex flex-col items-center gap-6">
-        <h2
+        {/* ✅ ეს არის მთავარი H1 (ქივორდი პირდაპირ) */}
+        <h1
           className="
-            py-4 text-4xl md:text-6xl font-extrabold leading-tight tracking-tight
-            text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-300
-          "
+    py-4
+    text-4xl md:text-6xl
+    font-extrabold tracking-tight
+    leading-[1.2] md:leading-[1.12]
+  "
         >
-          ინგლისური ენის სასწავლო
-          <br />
-          <span className="text-white">უნივერსალური აპლიკაცია</span>
-        </h2>
+          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-300">
+            ინგლისურის სწავლა ონლაინ
+          </span>
+          <span className="block text-white">
+            ქართულად, მარტივად და ეფექტურად
+          </span>
+        </h1>
 
         <p className="mt-4 text-base md:text-lg max-w-3xl leading-relaxed text-slate-300">
           ლექსიკა, გრამატიკა, კითხვა და სასაუბრო პრაქტიკა
@@ -33,10 +40,6 @@ export default function Hero() {
           პრაქტიკულად.
         </p>
 
-        {/* (optional) logo/image */}
-        {/* <Img alt="logo" style={{ width: "100%", height: "100%" }} src={require("../../public/apple-button.png")} /> */}
-
-        {/* Desktop: 2 store buttons */}
         <div className="hidden sm:flex flex-row justify-center items-center gap-0 mt-8 px-0 sm:px-24">
           <a
             href={iosUrl}
@@ -44,7 +47,7 @@ export default function Hero() {
           >
             <img
               src="/apple-button.png"
-              alt="Download on App Store"
+              alt="Download Advance on App Store"
               className="w-[280px] h-auto object-contain"
             />
           </a>
@@ -55,13 +58,12 @@ export default function Hero() {
           >
             <img
               src="/google-button.png"
-              alt="Get it on Google Play"
+              alt="Download Advance on Google Play"
               className="w-[280px] h-auto object-contain"
             />
           </a>
         </div>
 
-        {/* Mobile: single Download button */}
         <div className="sm:hidden w-full mt-8 px-2">
           <button
             onClick={() => setOpen(true)}
@@ -82,27 +84,24 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Mobile modal / bottom sheet */}
       {open && (
         <div
           className="fixed inset-0 z-50 flex items-end sm:hidden"
           role="dialog"
           aria-modal="true"
         >
-          {/* backdrop */}
           <button
             className="absolute inset-0 bg-black/60"
             onClick={() => setOpen(false)}
             aria-label="Close"
           />
 
-          {/* sheet */}
           <div className="relative w-full rounded-t-3xl bg-slate-900 border border-slate-800 p-5">
             <div className="mx-auto mb-4 h-1.5 w-12 rounded-full bg-slate-700" />
 
-            <h3 className="text-white text-lg font-extrabold">
+            <h2 className="text-white text-lg font-extrabold">
               აირჩიე პლატფორმა
-            </h3>
+            </h2>
             <p className="text-slate-300 text-sm mt-1">
               რომელზე გინდა გადმოწერა?
             </p>
@@ -110,6 +109,7 @@ export default function Hero() {
             <div className="mt-5 grid gap-3">
               <a
                 href={iosUrl}
+                onClick={() => trackDownload("ios")}
                 className="
                   w-full rounded-2xl p-4
                   bg-white/5 border border-white/10
@@ -122,6 +122,7 @@ export default function Hero() {
 
               <a
                 href={androidUrl}
+                onClick={() => trackDownload("android")}
                 className="
                   w-full rounded-2xl p-4
                   bg-white/5 border border-white/10

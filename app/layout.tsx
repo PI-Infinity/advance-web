@@ -1,26 +1,37 @@
-import { Metadata } from "next";
+// app/layout.tsx
+import type { Metadata } from "next";
 
-export const metadata = {
-  title: "Advance – ინგლისური ენის სასწავლო უნივერსალური აპლიკაცია",
-  description: "მეტი ცოდნა ყოველდღიურად!",
-  keywords: [
-    "Advance",
-    "English Learning",
-    "ინგლისური",
-    "inglisuri",
-    "ინგლისურის სწავლა",
-    "inglisuris swavla",
-  ],
+export const metadata: Metadata = {
+  metadataBase: new URL("https://advnc.pro"),
 
-  // ✅ Social preview settings /
+  // ✅ ქივორდი წინ, ბრენდი ბოლოს (უფრო ძლიერი SEO)
+  title: "ინგლისურის სწავლა ონლაინ ქართულად | Advance",
+  description:
+    "Advance — ინგლისურის სასწავლო აპლიკაცია ქართულად: სიტყვები, გრამატიკა, საკითხავი ტექსტები და AI პრაქტიკა ერთ სივრცეში.",
+
+  // ✅ Canonical + Robots (Google-სთვის მნიშვნელოვანი)
+  alternates: { canonical: "/" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+
   openGraph: {
-    title: "Advance – ინგლისური ენის სასწავლო უნივერსალური აპლიკაცია",
-    description: "მეტი ცოდნა ყოველდღიურად! 🌟",
+    title: "ინგლისურის სწავლა ონლაინ ქართულად | Advance",
+    description:
+      "სიტყვები, გრამატიკა, საკითხავი ტექსტები და AI პრაქტიკა — ყველაფერი ერთ აპში.",
     url: "https://advnc.pro",
     siteName: "Advance",
     images: [
       {
-        url: "https://advnc.pro/og-image.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Advance App Social Preview",
@@ -30,29 +41,28 @@ export const metadata = {
     type: "website",
   },
 
-  // ✅ Twitter cards
   twitter: {
     card: "summary_large_image",
-    title: "Advance – ინგლისური ენის სასწავლო უნივერსალური აპლიკაცია",
-    description: "მეტი ცოდნა ყოველდღიურად!",
-    images: ["https://advnc.pro/og-image.png"],
+    title: "ინგლისურის სწავლა ონლაინ ქართულად | Advance",
+    description:
+      "Advance — ინგლისურის სასწავლო აპლიკაცია ქართულად: სიტყვები, გრამატიკა, საკითხავი ტექსტები და AI პრაქტიკა.",
+    images: ["/og-image.png"],
   },
 
-  // ✅ Favicon & Icons (თუ გაქვს)
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/favicon-512.png",
     apple: "/apple-touch-icon.png",
   },
-
-  // ✅ For Crawlers
-  metadataBase: new URL("https://advnc.pro"),
 };
 
-export default function RootLayout({ children }: any) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="ka">
-      <body className="text-black bg-[#0F172A] text-white">{children}</body>
+      <body className="bg-[#0F172A] text-white">{children}</body>
     </html>
   );
 }

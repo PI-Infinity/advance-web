@@ -5,20 +5,27 @@ export default function Footer() {
     <footer className="mt-20 w-full backdrop-blur-lg bg-white/5">
       <div className="max-w-6xl mx-auto px-4 sm:px-0 py-10 pt-8 flex flex-col gap-6">
         {/* Brand */}
-        <div className="flex flex-row items-center">
+        <div className="flex flex-row items-center gap-3">
           <Img
-            alt="logo"
+            alt="Advance logo"
             style={{ width: 48, height: 48 }}
             src={require("../../public/logo.png")}
           />
-          <h1 className="text-2xl font-extrabold select-none cursor-pointer">
-            Advance
-          </h1>
+          {/* ❗️არა h1 */}
+          <div className="text-2xl font-extrabold select-none">Advance</div>
         </div>
-        <div className="flex items-center">
-          {/* App Store */}
+
+        {/* Brand description (SEO-friendly, unobtrusive) */}
+        <p className="text-sm text-[#94A3B8] max-w-md leading-relaxed">
+          Advance არის ინგლისურის სასწავლო აპლიკაცია ქართულად — სიტყვები,
+          გრამატიკა, საკითხავი ტექსტები და AI სასაუბრო პრაქტიკა ერთ სივრცეში.
+        </p>
+
+        {/* Store buttons */}
+        <div className="flex items-center gap-2">
           <a
             href="https://apps.apple.com/ge/app/advnc/id6752962049"
+            aria-label="Download Advance on App Store"
             className="flex items-center justify-center rounded-2xl hover:scale-105 transition-transform p-3"
           >
             <img
@@ -28,10 +35,10 @@ export default function Footer() {
             />
           </a>
 
-          {/* Google Play */}
           <a
             href="https://play.google.com/store/apps/details?id=com.advance.ena.app"
-            className="flex items-center justify-center rounded-2xl hover:scale-105 transition-transform  p-3"
+            aria-label="Download Advance on Google Play"
+            className="flex items-center justify-center rounded-2xl hover:scale-105 transition-transform p-3"
           >
             <img
               src="/google-button.png"
@@ -40,27 +47,28 @@ export default function Footer() {
             />
           </a>
         </div>
-        {/* Socials (placeholder links) */}
-        <div className="flex gap-6">
+
+        {/* Socials */}
+        <nav className="flex gap-6" aria-label="Social links">
           <a
             href="https://www.facebook.com/share/17qbM7NYqH/?mibextid=wwXIfr"
-            className="text-[#94A3B8] hover:text-indigo-600 transition transform hover:scale-110"
+            className="text-[#94A3B8] hover:text-indigo-500 transition transform hover:scale-110"
           >
             Facebook
           </a>
           <a
-            href="https://www.instagram.com/advnc.app?igsh=MTJqaTJmOWNuMHJubQ%3D%3D&utm_source=qr"
-            className="text-[#94A3B8] hover:text-indigo-600 transition transform hover:scale-110"
+            href="https://www.instagram.com/advnc.pro"
+            className="text-[#94A3B8] hover:text-indigo-500 transition transform hover:scale-110"
           >
             Instagram
           </a>
           <a
-            href="https://www.tiktok.com/@advance2202?_r=1&_t=ZS-91ItW3h4vMg"
-            className="text-[#94A3B8] hover:text-indigo-600 transition transform hover:scale-110"
+            href="https://www.tiktok.com/@advance2202"
+            className="text-[#94A3B8] hover:text-indigo-500 transition transform hover:scale-110"
           >
-            Tiktok
+            TikTok
           </a>
-        </div>
+        </nav>
 
         {/* Legal */}
         <p className="text-xs text-[#94A3B8] opacity-50">

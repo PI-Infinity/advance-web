@@ -1,4 +1,6 @@
+// app/page.tsx
 "use client";
+
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Features from "./components/Features";
@@ -7,11 +9,18 @@ import "./globals.css";
 import { AppContextWrapper } from "./context/app";
 import { useEffect } from "react";
 import LottiePlayer from "./components/lottie-player";
+import { Seo } from "./components/seo";
+import { initAnalytics } from "./lib/firebase";
 
 export default function Home() {
   useEffect(() => {
     import("@lottiefiles/lottie-player");
   }, []);
+
+  useEffect(() => {
+    initAnalytics();
+  }, []);
+
   return (
     <AppContextWrapper>
       <LottiePlayer
@@ -30,20 +39,18 @@ export default function Home() {
           transform: "rotate(90deg)",
         }}
       />
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "8px",
-          width: "100%",
-          alignItems: "center",
-        }}
-      >
+
+      {/* ✅ SEO ტექსტური სექცია (დიზაინს არ აფუჭებს, Google-ს ძალიან ეხმარება) */}
+      <main className="w-full flex flex-col gap-2 items-center">
         <Header />
         <Hero />
         <Features />
+
+        {/* SEO Content Block */}
+        <Seo />
+
         <Footer />
-      </div>
+      </main>
     </AppContextWrapper>
   );
 }
