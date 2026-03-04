@@ -77,6 +77,10 @@ It may include:
     content: `While We strive to protect Your data, no method of transmission or storage is 100% secure.`,
   },
   {
+    title: "Children's Privacy",
+    content: `Our Service is accessible to users of all ages, including children under the age of 13. We recognize the special importance of protecting children's personal data.\n\nIf You are under the age of 13, by using the Service, You confirm that You have the consent of Your parent or legal guardian. We do not collect more personal information from children than is reasonably necessary to participate in the activities or use the features of the Application.\n\nParents or guardians can contact us at any time to review, change, or request the deletion of their child's personal information by using the contact details provided below.`,
+  },
+  {
     title: "Contact Us",
     content: `If you have any questions about this Privacy Policy:
 
