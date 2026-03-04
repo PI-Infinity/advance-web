@@ -1,13 +1,16 @@
 import React from "react";
-
 const privacyPolicy = [
   {
     title: "",
-    content: `Last updated: August 6, 2025
+    content: `Privacy Policy for Advance
 
-This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
+Last updated: August 6, 2025
 
-We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.`,
+Advance is an English learning mobile application developed and operated by Tornike Pirtakhia (62001044941), an individual entrepreneur based in Tbilisi, Georgia.
+
+This Privacy Policy describes how Your information is collected, used, and protected when You use the Advance application.
+
+By using the Application, You agree to the collection and use of information in accordance with this Privacy Policy.`,
   },
   {
     title: "Interpretation and Definitions",
@@ -20,17 +23,14 @@ We use Your Personal data to provide and improve the Service. By using the Servi
         subtitle: "Definitions",
         content: `For the purposes of this Privacy Policy:
 
-- Account means a unique account created for You to access our Service.
-- Affiliate means an entity that controls or is controlled by a party.
-- Application means Advance, the software program provided by the Company.
-- Company refers to Advance LLC, Tbilisi, Georgia.
-- Country refers to: Georgia
-- Device means any device that can access the Service.
-- Personal Data is any information related to an identifiable individual.
-- Service refers to the Application.
-- Service Provider means a third-party company assisting the Service.
-- Usage Data refers to automatically collected data.
-- You means the individual using the Service.`,
+- Application means Advance, the English learning mobile application developed by Tornike Pirtakhia.
+- Developer refers to Tornike Pirtakhia, an individual entrepreneur located in Tbilisi, Georgia.
+- Device means any device that can access the Service such as a mobile phone, tablet, or computer.
+- Personal Data means any information related to an identified or identifiable individual.
+- Service refers to the Advance mobile application.
+- Service Provider means any third-party company or individual who processes data on behalf of the Developer.
+- Usage Data refers to data collected automatically when using the Application.
+- You means the individual accessing or using the Application.`,
       },
     ],
   },
@@ -39,55 +39,69 @@ We use Your Personal data to provide and improve the Service. By using the Servi
     subsections: [
       {
         subtitle: "Types of Data Collected",
-        content: `Personal Data
-
-While using Our Service we may ask You to provide personally identifiable information including:
+        content: `While using the Application, we may collect certain information including:
 
 - Email address
 - First name and last name
-- Address information
-- Usage Data`,
+- Usage data
+- Device information`,
       },
       {
         subtitle: "Usage Data",
-        content: `Usage Data is collected automatically when using the Service.
+        content: `Usage Data is collected automatically when using the Application.
 
-It may include:
+This may include:
 
 - IP address
-- Browser type
-- Pages visited
-- Time spent on pages
-- Device identifiers`,
+- Device type
+- Operating system
+- App usage statistics
+- Time spent using features of the Application
+
+This data helps improve the performance and learning experience within the Application.`,
       },
     ],
   },
   {
     title: "Use of Your Personal Data",
-    content: `The Company may use Personal Data for the following purposes:
+    content: `Personal Data may be used for the following purposes:
 
-- To provide and maintain the Service
-- To manage Your account
-- To perform contractual obligations
-- To contact You regarding updates
-- To provide offers and information`,
+- To provide and maintain the Application
+- To improve the learning experience
+- To manage user accounts
+- To analyze usage and performance
+- To respond to support requests
+- To send service updates and notifications`,
+  },
+  {
+    title: "Third-Party Services",
+    content: `The Application may use third-party services for analytics, cloud storage, artificial intelligence features, and notifications.
+
+These services may process certain information in order to provide functionality within the Application. Each third-party provider operates under its own privacy policy.`,
   },
   {
     title: "Security of Your Personal Data",
-    content: `While We strive to protect Your data, no method of transmission or storage is 100% secure.`,
+    content: `Protecting Your information is important. Reasonable technical and organizational measures are used to safeguard data.
+
+However, no method of transmission over the Internet or electronic storage is completely secure.`,
   },
   {
     title: "Children's Privacy",
-    content: `Our Service is accessible to users of all ages, including children under the age of 13. We recognize the special importance of protecting children's personal data.\n\nIf You are under the age of 13, by using the Service, You confirm that You have the consent of Your parent or legal guardian. We do not collect more personal information from children than is reasonably necessary to participate in the activities or use the features of the Application.\n\nParents or guardians can contact us at any time to review, change, or request the deletion of their child's personal information by using the contact details provided below.`,
+    content: `Our Service is accessible to users of all ages, including children under the age of 13.
+
+If You are under 13, You must have permission from a parent or guardian to use the Application.
+
+Parents or guardians may contact us to review or request deletion of their child's information.`,
   },
   {
     title: "Contact Us",
     content: `If you have any questions about this Privacy Policy:
 
+Developer: Tornike Pirtakhia  
+Location: Tbilisi, Georgia  
 Email: ena.language.app@gmail.com`,
   },
 ];
-
 function renderContent(text: string) {
   const lines = text.split("\n");
 
