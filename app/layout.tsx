@@ -1,4 +1,3 @@
-// app/layout.tsx
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
@@ -8,15 +7,15 @@ const siteUrl = "https://advnc.pro";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
-  // ✅ ძლიერი CTR + ბრენდინგი (და გვერდებზე template)
+  // ✅ უნივერსალური სათაური (ინგლისური + სხვა ენები)
   title: {
-    default: "Advance – ინგლისურის სწავლა AI-ით | №1 ქართული აპი",
+    default: "Advance – ისწავლე უცხო ენები AI-ით | №1 ქართული აპი",
     template: "%s | Advance",
   },
 
-  // ✅ უფრო “მარკეტინგული” აღწერა + CTA
+  // ✅ გაფართოებული აღწერა უფრო ფართო აუდიტორიისთვის
   description:
-    "ისწავლე ინგლისური Advance აპით: AI საუბრის პრაქტიკა, გრამატიკა და სიტყვები ერთ სივრცეში. უფასოდ დაიწყე დღესვე.",
+    "ისწავლე ინგლისური და სხვა უცხო ენები Advance აპით: AI საუბრის პრაქტიკა, გრამატიკა და ლექსიკა ერთ სივრცეში. დაიწყე უფასოდ დღესვე.",
 
   // ✅ Canonical + Robots
   alternates: { canonical: "/" },
@@ -32,11 +31,11 @@ export const metadata: Metadata = {
     },
   },
 
-  // ✅ OpenGraph (social preview + Google-brand signals)
+  // ✅ OpenGraph (სოციალური ქსელებისთვის)
   openGraph: {
-    title: "Advance – ინგლისურის სწავლა AI-ით | №1 ქართული აპი",
+    title: "Advance – ისწავლე უცხო ენები AI-ით | №1 ქართული აპი",
     description:
-      "AI საუბრის პრაქტიკა, გრამატიკა და სიტყვები — ყველაფერი ერთ აპში. დაიწყე უფასოდ დღესვე.",
+      "AI საუბრის პრაქტიკა, გრამატიკა და სიტყვები — ყველაფერი ერთ აპში. ისწავლე ინგლისური და სხვა ენები ქართულად.",
     url: siteUrl,
     siteName: "Advance",
     images: [
@@ -44,7 +43,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Advance App Social Preview",
+        alt: "Advance App - Language Learning Platform",
       },
     ],
     locale: "ka_GE",
@@ -54,9 +53,9 @@ export const metadata: Metadata = {
   // ✅ Twitter card
   twitter: {
     card: "summary_large_image",
-    title: "Advance – ინგლისურის სწავლა AI-ით | №1 ქართული აპი",
+    title: "Advance – ისწავლე უცხო ენები AI-ით",
     description:
-      "AI საუბრის პრაქტიკა, გრამატიკა და სიტყვები ერთ სივრცეში. დაიწყე უფასოდ დღესვე.",
+      "ინგლისური და სხვა უცხო ენები ერთ სივრცეში. დაიწყე სწავლა ქართულად დღესვე.",
     images: ["/og-image.png"],
   },
 
@@ -75,7 +74,7 @@ export default function RootLayout({
   return (
     <html lang="ka">
       <body className="bg-[#0F172A] text-white">
-        {/* ✅ Structured Data (Google rich snippet/sitelinks შანსი) */}
+        {/* ✅ Structured Data */}
         <Script
           id="ld-json-website"
           type="application/ld+json"
@@ -86,6 +85,11 @@ export default function RootLayout({
               "@type": "WebSite",
               name: "Advance",
               url: siteUrl,
+              potentialAction: {
+                "@type": "SearchAction",
+                target: `${siteUrl}/search?q={search_term_string}`,
+                "query-input": "required name=search_term_string",
+              },
             }),
           }}
         />

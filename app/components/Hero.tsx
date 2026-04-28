@@ -1,4 +1,3 @@
-// app/components/Hero.tsx
 import React, { useState } from "react";
 import { useAppContext } from "../context/app";
 import { trackDownload } from "../lib/analytics";
@@ -17,17 +16,17 @@ export default function Hero() {
       className="relative overflow-hidden py-32 pb-28 sm:py-48 text-center px-6 flex flex-col items-center"
     >
       <div className="relative max-w-5xl mx-auto flex flex-col items-center gap-6">
-        {/* ✅ ეს არის მთავარი H1 (ქივორდი პირდაპირ) */}
+        {/* ✅ უფრო ზოგადი და მასშტაბური სათაური */}
         <h1
           className="
-    py-4
-    text-4xl md:text-6xl
-    font-extrabold tracking-tight
-    leading-[1.2] md:leading-[1.12]
-  "
+            py-4
+            text-4xl md:text-6xl
+            font-extrabold tracking-tight
+            leading-[1.2] md:leading-[1.12]
+          "
         >
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-300">
-            ინგლისურის სწავლა ონლაინ
+            ისწავლე უცხო ენები ონლაინ
           </span>
           <span className="block text-white">
             ქართულად, მარტივად და ეფექტურად
@@ -35,14 +34,20 @@ export default function Hero() {
         </h1>
 
         <p className="mt-4 text-base md:text-lg max-w-3xl leading-relaxed text-slate-300">
-          ლექსიკა, გრამატიკა, კითხვა და სასაუბრო პრაქტიკა
-          <br className="hidden sm:block" /> ერთ სივრცეში — ისწავლე ეფექტურად და
-          პრაქტიკულად.
+          <span className="inline-flex items-center gap-1.5 flex-wrap justify-center sm:justify-start">
+            🇬🇧 ინგლისური, 🇩🇪 გერმანული, 🇫🇷 ფრანგული, 🇪🇸 ესპანური და სხვა უცხო
+            ენები —
+          </span>
+          <br className="hidden md:block" />
+          ლექსიკა, გრამატიკა და სასაუბრო პრაქტიკა ერთ სივრცეში.
+          <br className="hidden sm:block" />
+          დაიწყე სწავლა დღესვე შენს მშობლიურ ენაზე.
         </p>
 
         <div className="hidden sm:flex flex-row justify-center items-center gap-0 mt-8 px-0 sm:px-24">
           <a
             href={iosUrl}
+            onClick={() => trackDownload("ios")}
             className="flex items-center justify-center rounded-2xl shadow-lg hover:scale-105 transition-transform p-3"
           >
             <img
@@ -54,6 +59,7 @@ export default function Hero() {
 
           <a
             href={androidUrl}
+            onClick={() => trackDownload("android")}
             className="flex items-center justify-center rounded-2xl shadow-lg hover:scale-105 transition-transform p-3"
           >
             <img
@@ -109,7 +115,10 @@ export default function Hero() {
             <div className="mt-5 grid gap-3">
               <a
                 href={iosUrl}
-                onClick={() => trackDownload("ios")}
+                onClick={() => {
+                  trackDownload("ios");
+                  setOpen(false);
+                }}
                 className="
                   w-full rounded-2xl p-4
                   bg-white/5 border border-white/10
@@ -122,7 +131,10 @@ export default function Hero() {
 
               <a
                 href={androidUrl}
-                onClick={() => trackDownload("android")}
+                onClick={() => {
+                  trackDownload("android");
+                  setOpen(false);
+                }}
                 className="
                   w-full rounded-2xl p-4
                   bg-white/5 border border-white/10

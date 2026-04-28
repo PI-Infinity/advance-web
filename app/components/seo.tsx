@@ -12,36 +12,36 @@ export const Seo = () => {
           <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/20 px-4 py-2">
             <span className="h-2 w-2 rounded-full bg-[#38BDF8]" />
             <span className="text-xs sm:text-sm text-white/80">
-              English learning • Georgia
+              Language Learning • Georgia
             </span>
           </div>
 
           <h2 className="mt-5 text-2xl sm:text-3xl font-extrabold text-white">
-            ინგლისურის სწავლა ონლაინ ქართულად
+            უცხო ენების სწავლა ონლაინ ქართულად
           </h2>
 
           <p className="mt-4 text-slate-300 leading-relaxed max-w-3xl">
-            <strong className="text-white">Advance</strong> არის ინგლისურის
-            სასწავლო აპლიკაცია ქართულად, რომელიც დაგეხმარება{" "}
-            <strong className="text-white">ინგლისურის სწავლაში ონლაინ</strong>{" "}
-            ყოველდღიურად. აპში ერთ სივრცეში გაქვს სიტყვების სწავლა, გრამატიკა,
-            საკითხავი ტექსტები და{" "}
+            <strong className="text-white">Advance</strong> არის ინოვაციური
+            სასწავლო აპლიკაცია ქართულად, რომელიც დაგეხმარებათ{" "}
+            <strong className="text-white">უცხო ენების ათვისებაში</strong>{" "}
+            მარტივად და სახალისოდ. აპში ერთ სივრცეში მოცემულია:
+            სიტყვების/ფრაზების სწავლა, გრამატიკა, საკითხავი ტექსტები და{" "}
             <strong className="text-white">AI სასაუბრო პრაქტიკა</strong>.
           </p>
 
           <p className="mt-4 text-slate-300 leading-relaxed max-w-3xl">
-            თუ ეძებ საუკეთესო გზას{" "}
-            <strong className="text-white">ინგლისურის სწავლა ქართულად</strong>{" "}
-            ტელეფონიდან, Advance გაძლევს სრულ ეკოსისტემას — დამწყებიდან მაღალ
-            დონემდე.
+            თუ ეძებთ საუკეთესო გზას{" "}
+            <strong className="text-white">ენების სასწავლად ქართულად</strong>{" "}
+            პირდაპირ ტელეფონიდან, Advance გთავაზობთ სრულ ეკოსისტემას ნებისმიერი
+            დონის მომხმარებლისთვის.
           </p>
 
           <div className="mt-7 grid gap-3 sm:grid-cols-2">
             {[
-              "ინგლისურის სწავლა დამწყებისთვის (A1–A2)",
-              "გრამატიკის სწავლა მარტივად და პრაქტიკულად",
-              "სიტყვების და ფრაზების დამახსოვრება სწრაფად",
-              "სასაუბრო პრაქტიკა AI მასწავლებელთან",
+              "ინგლისურის და სხვა ენების სწავლა (A1–C1)",
+              "გრამატიკული კურსები ქართულ განმარტებებით",
+              "ინტერაქტიული სავარჯიშოები ლექსიკის გასამყარებლად",
+              "პერსონალური AI მასწავლებელი 24/7-ზე",
             ].map((t) => (
               <div
                 key={t}
@@ -59,11 +59,11 @@ export const Seo = () => {
             <p className="text-slate-300 text-sm">
               ჩამოტვირთე{" "}
               <span className="text-white font-semibold">Advance</span> iOS-ზე
-              ან Android-ზე და დაიწყე სწავლა დღესვე.
+              ან Android-ზე და დაადექი ენების სწავლის პროფესიონალურ გზას.
             </p>
           </div>
 
-          {/* Structured Data */}
+          {/* Structured Data (განახლებული აღწერა) */}
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
@@ -75,7 +75,7 @@ export const Seo = () => {
                 operatingSystem: "iOS, Android",
                 url: "https://advnc.pro",
                 description:
-                  "ინგლისურის სწავლა ონლაინ ქართულად: სიტყვები, გრამატიკა, საკითხავი ტექსტები და AI პრაქტიკა ერთ სივრცეში.",
+                  "უცხო ენების სწავლა ონლაინ ქართულად: ინგლისური და სხვა ენები, სიტყვები, გრამატიკა და AI პრაქტიკა ერთ აპლიკაციაში.",
                 offers: { "@type": "Offer", price: "0", priceCurrency: "GEL" },
               }),
             }}
