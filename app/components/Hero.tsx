@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative overflow-hidden py-32 pb-28 sm:py-48 text-center px-6 flex flex-col items-center"
+      className="relative overflow-hidden py-32 pb-8 sm:py-48 text-center px-6 flex flex-col items-center"
     >
       <div className="relative max-w-5xl mx-auto flex flex-col items-center gap-6">
         {/* ✅ უფრო ზოგადი და მასშტაბური სათაური */}

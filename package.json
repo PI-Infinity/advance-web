@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@lottiefiles/lottie-player": "^2.0.12",
+    "axios": "^1.16.1",
     "firebase": "^12.8.0",
     "lucide-react": "^0.548.0",
     "next": "16.0.10",
