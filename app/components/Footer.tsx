@@ -14,7 +14,6 @@ export default function Footer() {
           />
           <div className="text-2xl font-extrabold select-none">Advance</div>
         </div>
-
         {/* Brand description (SEO-friendly, updated for multiple languages) */}
         <p className="text-sm text-[#94A3B8] max-w-md leading-relaxed">
           <strong className="text-white/80 font-semibold">Advance</strong> არის
@@ -22,7 +21,6 @@ export default function Footer() {
           ენები ერთ სივრცეში. ისწავლე ლექსიკა, გრამატიკა და გამოიყენე AI
           სასაუბრო პრაქტიკა ყოველდღიურად.
         </p>
-
         {/* Store buttons */}
         <div className="flex items-center gap-2">
           <a
@@ -49,28 +47,43 @@ export default function Footer() {
             />
           </a>
         </div>
+        {/* Socials & Footer Links */}
+        <nav
+          className="flex w-full flex-col gap-5 sm:flex-row sm:items-center sm:gap-6"
+          aria-label="Social links and legal pages"
+        >
+          {/* Social links */}
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-3 sm:justify-start sm:gap-6">
+            <a
+              href="https://www.facebook.com/share/17qbM7NYqH/?mibextid=wwXIfr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-[#94A3B8] transition hover:scale-110 hover:text-sky-400"
+            >
+              Facebook
+            </a>
 
-        {/* Socials */}
-        <nav className="flex gap-6" aria-label="Social links w-full">
-          <a
-            href="https://www.facebook.com/share/17qbM7NYqH/?mibextid=wwXIfr"
-            className="text-[#94A3B8] hover:text-sky-400 transition transform hover:scale-110"
-          >
-            Facebook
-          </a>
-          <a
-            href="https://www.instagram.com/advnc.pro"
-            className="text-[#94A3B8] hover:text-sky-400 transition transform hover:scale-110"
-          >
-            Instagram
-          </a>
-          <a
-            href="https://www.tiktok.com/@advance2202"
-            className="text-[#94A3B8] hover:text-sky-400 transition transform hover:scale-110"
-          >
-            TikTok
-          </a>
-          <div className="ml-auto flex items-center justify-center gap-4 text-sm text-[#94A3B8]">
+            <a
+              href="https://www.instagram.com/advnc.pro"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-[#94A3B8] transition hover:scale-110 hover:text-sky-400"
+            >
+              Instagram
+            </a>
+
+            <a
+              href="https://www.tiktok.com/@advance2202"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-[#94A3B8] transition hover:scale-110 hover:text-sky-400"
+            >
+              TikTok
+            </a>
+          </div>
+
+          {/* Legal pages */}
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-3 text-center text-xs text-[#94A3B8] sm:ml-auto sm:justify-end sm:gap-4 sm:text-sm">
             <Link
               href="/terms"
               className="transition-colors hover:text-sky-400"
