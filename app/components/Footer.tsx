@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Img from "./image";
 
 export default function Footer() {
@@ -50,7 +51,7 @@ export default function Footer() {
         </div>
 
         {/* Socials */}
-        <nav className="flex gap-6" aria-label="Social links">
+        <nav className="flex gap-6" aria-label="Social links w-full">
           <a
             href="https://www.facebook.com/share/17qbM7NYqH/?mibextid=wwXIfr"
             className="text-[#94A3B8] hover:text-sky-400 transition transform hover:scale-110"
@@ -69,11 +70,33 @@ export default function Footer() {
           >
             TikTok
           </a>
+          <div className="ml-auto flex items-center justify-center gap-4 text-sm text-[#94A3B8]">
+            <Link
+              href="/terms"
+              className="transition-colors hover:text-sky-400"
+            >
+              წესები და პირობები
+            </Link>
+
+            <Link
+              href="/privacy"
+              className="transition-colors hover:text-sky-400"
+            >
+              კონფიდენციალურობა
+            </Link>
+
+            <Link
+              href="/about"
+              className="transition-colors hover:text-sky-400"
+            >
+              შესახებ
+            </Link>
+          </div>
         </nav>
 
         {/* Legal */}
         <div className="border-t border-white/5 pt-6">
-          <p className="text-xs text-[#94A3B8] opacity-50">
+          <p className="text-xs text-[#fff] opacity-50">
             © 2026 Advance — ყველა უფლება დაცულია.
           </p>
         </div>

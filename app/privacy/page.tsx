@@ -1,162 +1,210 @@
+"use client";
+
 import React from "react";
+
 const privacyPolicy = [
   {
     title: "",
-    content: `Privacy Policy for Advance
+    content: `ბოლო განახლება: 2025 წლის 6 აგვისტო
 
-Last updated: August 6, 2025
+ეს კონფიდენციალურობის პოლიტიკა აღწერს ჩვენს პოლიტიკასა და პროცედურებს თქვენი ინფორმაციის შეგროვების, გამოყენებისა და გამჟღავნების შესახებ სერვისის გამოყენებისას. ასევე გაცნობებთ თქვენს კონფიდენციალურობის უფლებებს და იმას, თუ როგორ გიცავთ კანონი.
 
-Advance is an English learning mobile application developed and operated by Tornike Pirtakhia (62001044941), an individual entrepreneur based in Tbilisi, Georgia.
-
-This Privacy Policy describes how Your information is collected, used, and protected when You use the Advance application.
-
-By using the Application, You agree to the collection and use of information in accordance with this Privacy Policy.`,
+ჩვენ ვიყენებთ თქვენს პერსონალურ მონაცემებს სერვისის გასაუმჯობესებლად. სერვისის გამოყენებით თქვენ ეთანხმებით ინფორმაციის შეგროვებასა და გამოყენებას ამ კონფიდენციალურობის პოლიტიკის შესაბამისად.`,
   },
   {
-    title: "Interpretation and Definitions",
+    title: "ტერმინების განმარტებები",
     subsections: [
       {
-        subtitle: "Interpretation",
-        content: `The words of which the initial letter is capitalized have meanings defined under the following conditions.`,
+        subtitle: "ტერმინების განმარტება",
+        content: `სიტყვებს, რომელთა პირველი ასო დიდი ასოთი იწყება, ამ პოლიტიკაში განსაზღვრული მნიშვნელობა აქვს. ეს განმარტებები ერთნაირად გამოიყენება როგორც მხოლობით, ისე მრავლობით ფორმაში.`,
       },
       {
-        subtitle: "Definitions",
-        content: `For the purposes of this Privacy Policy:
+        subtitle: "განსაზღვრებები",
+        content: `ამ კონფიდენციალურობის პოლიტიკის მიზნებისთვის:
 
-- Application means Advance, the English learning mobile application developed by Tornike Pirtakhia.
-- Developer refers to Tornike Pirtakhia, an individual entrepreneur located in Tbilisi, Georgia.
-- Device means any device that can access the Service such as a mobile phone, tablet, or computer.
-- Personal Data means any information related to an identified or identifiable individual.
-- Service refers to the Advance mobile application.
-- Service Provider means any third-party company or individual who processes data on behalf of the Developer.
-- Usage Data refers to data collected automatically when using the Application.
-- You means the individual accessing or using the Application.`,
+- **ანგარიში** — უნიკალური ანგარიში, რომელიც შექმნილია სერვისზე ან მის ნაწილზე წვდომისთვის.
+- **თანამშრომელი ან აფილირებული პირი** — სუბიექტი, რომელიც აკონტროლებს კომპანიას, კონტროლდება მის მიერ ან მასთან საერთო კონტროლის ქვეშ იმყოფება.
+- **აპლიკაცია** — Advance, კომპანიის მიერ მოწოდებული პროგრამული უზრუნველყოფა.
+- **კომპანია** — Advance, რომელიც ამ პოლიტიკაში ასევე მოიხსენიება როგორც „ჩვენ“ ან „ჩვენი“ და რომლის საკონტაქტო ინფორმაცია მითითებულია ამ პოლიტიკის ბოლოს.
+- **ქვეყანა** — საქართველო.
+- **მოწყობილობა** — ნებისმიერი მოწყობილობა, რომლის მეშვეობითაც შესაძლებელია სერვისზე წვდომა, მათ შორის კომპიუტერი, მობილური ტელეფონი ან პლანშეტი.
+- **პერსონალური მონაცემები** — ნებისმიერი ინფორმაცია, რომელიც უკავშირდება იდენტიფიცირებულ ან იდენტიფიცირებად ფიზიკურ პირს.
+- **სერვისი** — აპლიკაცია Advance.
+- **მომსახურების მიმწოდებელი** — ფიზიკური ან იურიდიული პირი, რომელიც კომპანიის სახელით ამუშავებს მონაცემებს სერვისის მიწოდების, გაუმჯობესების ან ანალიზის მიზნით.
+- **გამოყენების მონაცემები** — მონაცემები, რომლებიც ავტომატურად გროვდება სერვისის გამოყენებისას ან მისი ინფრასტრუქტურის მეშვეობით.
+- **თქვენ** — ფიზიკური პირი, რომელიც იყენებს სერვისს, ან იურიდიული პირი, რომლის სახელითაც ეს ფიზიკური პირი მოქმედებს.`,
       },
     ],
   },
   {
-    title: "Collecting and Using Your Personal Data",
+    title: "თქვენი პერსონალური მონაცემების შეგროვება და გამოყენება",
     subsections: [
       {
-        subtitle: "Types of Data Collected",
-        content: `While using the Application, we may collect certain information including:
+        subtitle: "შეგროვებული მონაცემების ტიპები",
+        content: `პერსონალური მონაცემები
 
-- Email address
-- First name and last name
-- Usage data
-- Device information`,
+სერვისის გამოყენებისას შესაძლოა მოგთხოვოთ გარკვეული ინფორმაცია, რომელიც შეიძლება გამოყენებულ იქნეს თქვენი იდენტიფიცირების ან თქვენთან დაკავშირების მიზნით. ეს ინფორმაცია შეიძლება მოიცავდეს:
+
+- ელექტრონული ფოსტის მისამართს.
+- სახელსა და გვარს.
+- მისამართს, რეგიონს, ქალაქსა და საფოსტო ინდექსს, თუ ეს ინფორმაცია საჭიროა და თქვენ მას გვაწვდით.
+- სერვისის გამოყენების მონაცემებს.`,
       },
       {
-        subtitle: "Usage Data",
-        content: `Usage Data is collected automatically when using the Application.
+        subtitle: "გამოყენების მონაცემები",
+        content: `გამოყენების მონაცემები ავტომატურად გროვდება სერვისის გამოყენებისას.
 
-This may include:
+ეს მონაცემები შეიძლება მოიცავდეს თქვენი მოწყობილობის IP მისამართს, ბრაუზერის ტიპსა და ვერსიას, სერვისის მონახულებულ გვერდებს, ვიზიტის თარიღსა და დროს, გვერდებზე გატარებულ დროს, მოწყობილობის იდენტიფიკატორებსა და სხვა დიაგნოსტიკურ ინფორმაციას.
 
-- IP address
-- Device type
-- Operating system
-- App usage statistics
-- Time spent using features of the Application
+მობილური მოწყობილობით სერვისზე წვდომისას შესაძლოა შეგროვდეს დამატებითი ტექნიკური ინფორმაცია, მათ შორის მოწყობილობის ტიპი, ოპერაციული სისტემა და მობილური ბრაუზერის ტიპი.`,
+      },
+      {
+        subtitle: "ინფორმაცია, რომელიც შეგროვებულია აპლიკაციის გამოყენებისას",
+        content: `აპლიკაციის გარკვეული ფუნქციების უზრუნველსაყოფად, თქვენი ნებართვით, შესაძლოა გამოვიყენოთ:
 
-This data helps improve the performance and learning experience within the Application.`,
+- სურათები და სხვა ინფორმაცია, რომლებზე წვდომაც ხორციელდება თქვენი მოწყობილობის კამერის ან ფოტოების ბიბლიოთეკის მეშვეობით.
+
+ეს ინფორმაცია გამოიყენება შესაბამისი ფუნქციების უზრუნველსაყოფად, სერვისის გასაუმჯობესებლად და გამოცდილების მოსარგებად. ინფორმაცია შეიძლება დამუშავდეს კომპანიის ან შესაბამისი მომსახურების მიმწოდებლის სერვერებზე ან შეინახოს თქვენს მოწყობილობაზე, კონკრეტული ფუნქციის მიხედვით.
+
+თქვენ შეგიძლიათ მართოთ კამერასა და ფოტოების ბიბლიოთეკაზე წვდომის ნებართვები თქვენი მოწყობილობის პარამეტრებში.`,
       },
     ],
   },
   {
-    title: "Use of Your Personal Data",
-    content: `Personal Data may be used for the following purposes:
+    title: "თქვენი პერსონალური მონაცემების გამოყენება",
+    content: `კომპანიამ შესაძლოა გამოიყენოს პერსონალური მონაცემები შემდეგი მიზნებისთვის:
 
-- To provide and maintain the Application
-- To improve the learning experience
-- To manage user accounts
-- To analyze usage and performance
-- To respond to support requests
-- To send service updates and notifications`,
+- **სერვისის მიწოდება და შენარჩუნება** — სერვისის ფუნქციონირების უზრუნველყოფისა და მისი გამოყენების მონიტორინგისთვის.
+- **ანგარიშის მართვა** — თქვენი რეგისტრაციისა და მომხმარებლის ანგარიშის სამართავად.
+- **შეკვეთებისა და გადახდების მართვა** — თქვენ მიერ შეძენილი პროდუქტებისა და მომსახურებების მიწოდებისა და შესაბამისი ტრანზაქციების დასამუშავებლად.
+- **თქვენთან კომუნიკაცია** — ელფოსტის, SMS-ის, push-შეტყობინებების ან სხვა შესაბამისი საშუალებების გამოყენებით სერვისის განახლებებისა და მნიშვნელოვანი ინფორმაციის მოსაწოდებლად.
+- **სიახლეებისა და შეთავაზებების მიწოდება** — ჩვენი პროდუქტების, მომსახურებებისა და ღონისძიებების შესახებ ინფორმაციის გასაზიარებლად, კანონით დაშვებულ ფარგლებში.`,
   },
   {
-    title: "Third-Party Services",
-    content: `The Application may use third-party services for analytics, cloud storage, artificial intelligence features, and notifications.
-
-These services may process certain information in order to provide functionality within the Application. Each third-party provider operates under its own privacy policy.`,
+    title: "თქვენი პერსონალური მონაცემების უსაფრთხოება",
+    content: `თქვენი პერსონალური მონაცემების უსაფრთხოება ჩვენთვის მნიშვნელოვანია. თუმცა, ინტერნეტით მონაცემების გადაცემის ან ელექტრონულად შენახვის არცერთი მეთოდი არ არის აბსოლუტურად უსაფრთხო. მიუხედავად იმისა, რომ ვიყენებთ გონივრულ ზომებს მონაცემების დასაცავად, მათი სრული უსაფრთხოების გარანტიას ვერ მოგცემთ.`,
   },
   {
-    title: "Security of Your Personal Data",
-    content: `Protecting Your information is important. Reasonable technical and organizational measures are used to safeguard data.
+    title: "დაგვიკავშირდით",
+    content: `თუ გაქვთ კითხვები ამ კონფიდენციალურობის პოლიტიკასთან დაკავშირებით, დაგვიკავშირდით:
 
-However, no method of transmission over the Internet or electronic storage is completely secure.`,
-  },
-  {
-    title: "Children's Privacy",
-    content: `Our Service is accessible to users of all ages, including children under the age of 13.
-
-If You are under 13, You must have permission from a parent or guardian to use the Application.
-
-Parents or guardians may contact us to review or request deletion of their child's information.`,
-  },
-  {
-    title: "Contact Us",
-    content: `If you have any questions about this Privacy Policy:
-
-Developer: Tornike Pirtakhia  
-Location: Tbilisi, Georgia  
-Email: ena.language.app@gmail.com`,
+- **ელფოსტა:** info@advnc.pro`,
   },
 ];
-function renderContent(text: string) {
-  const lines = text.split("\n");
 
-  return lines.map((line, index) => {
-    if (line.startsWith("- ")) {
+function renderContent(text: string) {
+  return text
+    .trim()
+    .split(/\n\s*\n/)
+    .map((paragraph, index) => {
+      const lines = paragraph
+        .split("\n")
+        .map((line) => line.trim())
+        .filter(Boolean);
+
+      const isList = lines.every((line) => line.startsWith("- "));
+
+      if (isList) {
+        return (
+          <ul
+            key={index}
+            className="my-4 list-disc space-y-3 pl-6 marker:text-slate-400"
+          >
+            {lines.map((line, lineIndex) => (
+              <li key={lineIndex} className="pl-1">
+                {renderInline(line.slice(2))}
+              </li>
+            ))}
+          </ul>
+        );
+      }
+
       return (
-        <li key={index} className="ml-6 list-disc">
-          {line.replace("- ", "")}
-        </li>
+        <p key={index} className="mb-4 last:mb-0">
+          {lines.map((line, lineIndex) => (
+            <React.Fragment key={lineIndex}>
+              {lineIndex > 0 && <br />}
+              {renderInline(line)}
+            </React.Fragment>
+          ))}
+        </p>
+      );
+    });
+}
+
+function renderInline(text: string) {
+  return text.split(/(\*\*.*?\*\*)/g).map((part, index) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return (
+        <strong key={index} className="font-semibold text-slate-900">
+          {part.slice(2, -2)}
+        </strong>
       );
     }
 
-    return (
-      <p key={index} className="mb-2">
-        {line}
-      </p>
-    );
+    return part;
   });
 }
 
 export default function PrivacyPage() {
   return (
-    <main style={{ maxWidth: 900, margin: "0 auto", padding: "60px 20px" }}>
-      <h1 style={{ fontSize: 36, fontWeight: 700, marginBottom: 30 }}>
-        Privacy Policy
-      </h1>
+    <main className="min-h-screen bg-slate-50 px-4 py-10 text-slate-700 sm:px-6 sm:py-16">
+      <article className="mx-auto max-w-4xl overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+        <header className="border-b border-slate-200 px-6 py-8 sm:px-10 sm:py-10">
+          <div className="mb-4 inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold tracking-wide text-slate-600">
+            ADVANCE
+          </div>
 
-      {privacyPolicy.map((section, i) => (
-        <section key={i} style={{ marginBottom: 40 }}>
-          {section.title && (
-            <h2 style={{ fontSize: 24, fontWeight: 600, marginBottom: 12 }}>
-              {section.title}
-            </h2>
-          )}
+          <h1 className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
+            კონფიდენციალურობის პოლიტიკა
+          </h1>
 
-          {section.content && (
-            <div style={{ lineHeight: 1.7 }}>
-              {renderContent(section.content)}
-            </div>
-          )}
+          <p className="mt-4 text-sm text-slate-500">
+            ბოლო განახლება: 6 აგვისტო, 2025
+          </p>
+        </header>
 
-          {section.subsections &&
-            section.subsections.map((sub, j) => (
-              <div key={j} style={{ marginTop: 20 }}>
-                <h3 style={{ fontSize: 18, fontWeight: 600, marginBottom: 6 }}>
-                  {sub.subtitle}
-                </h3>
+        <div className="px-6 py-8 sm:px-10 sm:py-10">
+          {privacyPolicy.map((section, index) => (
+            <section
+              key={index}
+              className={
+                index === 0
+                  ? "border-b border-slate-100 pb-7"
+                  : "border-b border-slate-100 py-7 last:border-b-0 last:pb-0"
+              }
+            >
+              {section.title && (
+                <h2 className="mb-5 text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">
+                  {section.title}
+                </h2>
+              )}
 
-                <div style={{ lineHeight: 1.7 }}>
-                  {renderContent(sub.content)}
+              {section.content && (
+                <div className="text-[15px] leading-7 text-slate-600">
+                  {renderContent(section.content)}
                 </div>
-              </div>
-            ))}
-        </section>
-      ))}
+              )}
+
+              {section.subsections?.map((subsection, subIndex) => (
+                <div key={subIndex} className="mt-7 first:mt-0">
+                  <h3 className="mb-3 text-lg font-semibold text-slate-800">
+                    {subsection.subtitle}
+                  </h3>
+
+                  <div className="text-[15px] leading-7 text-slate-600">
+                    {renderContent(subsection.content)}
+                  </div>
+                </div>
+              ))}
+            </section>
+          ))}
+        </div>
+
+        <footer className="border-t border-slate-200 bg-slate-50 px-6 py-5 text-sm text-slate-500 sm:px-10">
+          Advance · info@advnc.pro
+        </footer>
+      </article>
     </main>
   );
 }
